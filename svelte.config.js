@@ -22,7 +22,7 @@ const config = {
         paths: {
             base: ''
         },
-
+        // adding a thing
         // Ensure client-side routing works correctly
         prerender: {
             handleHttpError: ({ path, referrer, message }) => {
