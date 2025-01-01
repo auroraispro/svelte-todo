@@ -16,6 +16,12 @@
       case "all": {
         return tasks;
       }
+      case "done": {
+        return tasks.filter((task) => task.done);
+      }
+      case "todo": {
+        return tasks.filter((task) => !task.done);
+      }
     }
     return tasks;
   });
@@ -32,10 +38,19 @@
     task.done = !task.done;
   }
 
-  function removeTask(index: number) {
+  function removeTask(id: string) {
+    const index = tasks.findIndex((task) => task.id === id);
     tasks.splice(index, 1);
   }
 </script>
+
+{#snippet filterButton(filter: Filter)}
+  <button
+    onclick={() => (currentFilter = filter)}
+    class:contrast={currentFilter === filter}
+    class="secondary">{filter}</button
+  >
+{/snippet}
 
 <main>
   <h1>{message}</h1>
@@ -49,9 +64,9 @@
   </p>
   {#if tasks.length}
     <div class="button-container">
-      <button class="secondary">All</button>
-      <button class="secondary">Todo</button>
-      <button class="secondary">Done</button>
+      {@render filterButton("all")}
+      {@render filterButton("todo")}
+      {@render filterButton("done")}
     </div>
   {/if}
   <TasksList
