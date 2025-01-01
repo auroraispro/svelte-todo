@@ -7,9 +7,9 @@ const config = {
         // Adapter for static site generation
         adapter: adapter({
             // Directory where the static site will be built
-            pages: 'public',
+            pages: 'build',
             // Directory for static assets
-            assets: 'public',
+            assets: 'build',
             // Set this to true if you're deploying to subdirectories
             fallback: 'index.html',
             // Precompress files with brotli and gzip
