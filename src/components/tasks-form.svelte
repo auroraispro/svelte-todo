@@ -30,17 +30,13 @@
   form {
     display: flex;
 
-    height: 3em;
     gap: 0.5em;
     align-items: stretch;
   }
 
-  button {
-    margin-bottom: 0;
-  }
-
   input {
     flex: 1;
-    margin: 0;
+    margin: unset;
+    width: unset;
   }
 </style>
