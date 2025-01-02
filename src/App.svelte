@@ -51,6 +51,12 @@
     class="secondary">{filter}</button
   >
 {/snippet}
+<head>
+  <link
+    rel="stylesheet"
+    href="css.pico.min.css"
+  />
+</head>
 
 <main>
   <h1>{message}</h1>
@@ -78,13 +84,12 @@
 
 <style>
   main {
-    margin: 1rem;
+    margin-bottom: 1rem;
     max-width: 800px;
   }
   .button-container {
     display: flex;
     justify-content: right;
-    margin-bottom: 1rem;
     gap: 0.5rem;
   }
 </style>
