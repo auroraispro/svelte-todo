@@ -29,7 +29,7 @@
 <style>
   form {
     display: flex;
-
+    height: 3rem;
     gap: 0.5em;
     align-items: stretch;
   }
