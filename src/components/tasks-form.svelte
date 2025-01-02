@@ -32,7 +32,7 @@
 
     height: 3em;
     gap: 0.5em;
-    align-items: center;
+    align-items: stretch;
   }
 
   button {
@@ -41,6 +41,6 @@
 
   input {
     flex: 1;
-    margin-bottom: 0;
+    margin: 0;
   }
 </style>
